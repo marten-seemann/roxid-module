@@ -1,5 +1,7 @@
 <?php
-class roxid_extend_oxbasketitem extends roxid_extend_oxbasketitem_parent {
+namespace SeemannIT\Roxid\Application\Model;
+
+class Basketitem extends Basketitem_parent {
   protected function _setArticle($sProductId) {
     parent::_setArticle($sProductId);
     $oArticle = $this->getArticle(true, $sProductId);

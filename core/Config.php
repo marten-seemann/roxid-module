@@ -1,5 +1,7 @@
 <?php
-class roxid_extend_oxconfig extends roxid_extend_oxconfig_parent {
+namespace SeemannIT\Roxid\Core;
+
+class Config extends Config_parent {
 
   protected $_sFaviconDir = 'build/favicons';
   protected $blForceRetinaDevice = null; // should take a bool

@@ -1,5 +1,7 @@
 <?php
-class roxid_extend_oxviewconfig extends roxid_extend_oxviewconfig_parent {
+namespace SeemannIT\Roxid\Core;
+
+class ViewConfig extends ViewConfig_parent {
   protected $icon_config;
 
   /**
@@ -154,7 +156,7 @@ class roxid_extend_oxviewconfig extends roxid_extend_oxviewconfig_parent {
   * @return array[string] the localization with all JavaScript lang strings
   */
   public function getJsLangStrings() {
-    $oLang = oxRegistry::getLang();
+    $oLang = \OxidEsales\Eshop\Core\Registry::getLang();
 
     $langkeys= $oLang->getJsLangKeys();
     $dict = array();

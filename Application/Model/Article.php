@@ -1,7 +1,9 @@
 <?php
-require_once(dirname(__FILE__)."/../inc/retinafy.php");
+namespace SeemannIT\Roxid\Application\Model;
 
-class roxid_extend_oxarticle extends roxid_extend_oxarticle_parent {
+require_once(dirname(__FILE__)."/../../inc/retinafy.php");
+
+class Article extends Article_parent {
   /**
   * get image dimensions of the master pictures
   * needed for the PhotoSwipe library

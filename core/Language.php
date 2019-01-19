@@ -1,5 +1,7 @@
 <?php
-class roxid_extend_oxlang extends roxid_extend_oxlang_parent {
+namespace SeemannIT\Roxid\Core;
+
+class Language extends Language_parent {
   /**
   * get all paths to language files for a specified language and the selected theme
   *
@@ -10,10 +12,10 @@ class roxid_extend_oxlang extends roxid_extend_oxlang_parent {
   */
   protected function _getJsLangPaths($iLang) {
     $oConfig = $this->getConfig();
-    $sAppDir        = $oConfig->getAppDir();
-    $sLang = oxRegistry::getLang()->getLanguageAbbr($iLang);
-    $sTheme         = $oConfig->getConfigParam( "sTheme" );
-    $sCustomTheme   = $oConfig->getConfigParam( "sCustomTheme" );
+    $sAppDir = $oConfig->getAppDir();
+    $sLang = \OxidEsales\Eshop\Core\Registry::getLang()->getLanguageAbbr($iLang);
+    $sTheme = $oConfig->getConfigParam( "sTheme" );
+    $sCustomTheme = $oConfig->getConfigParam( "sCustomTheme" );
 
     $basePath = $sAppDir . 'views/';
 

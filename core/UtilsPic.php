@@ -1,5 +1,7 @@
 <?php
-class roxid_extend_oxutilspic extends roxid_extend_oxutilspic_parent {
+namespace SeemannIT\Roxid\Core;
+
+class UtilsPic extends UtilsPic_parent {
   // when deleting a picture, make sure to delete the @2x version, too
   public function safePictureDelete($sPicName, $sAbsDynImageDir, $sTable, $sField) {
     $pinfo = pathinfo($sPicName);

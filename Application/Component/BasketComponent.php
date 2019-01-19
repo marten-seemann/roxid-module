@@ -1,5 +1,7 @@
 <?php
-class roxid_extend_oxcmp_basket extends roxid_extend_oxcmp_basket_parent {
+namespace SeemannIT\Roxid\Application\Component;
+
+class BasketComponent extends BasketComponent_parent {
   protected function _getRedirectUrl() {
     $oConfig = $this->getConfig();
     if($oConfig->getRequestParameter("useAjax")) return "ajaxbasket?clearErrors=true";

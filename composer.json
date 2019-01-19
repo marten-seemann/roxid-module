@@ -1,0 +1,21 @@
+{
+  "name": "seemannit/roxid",
+  "description": "ROXID module.",
+  "type": "oxideshop-module",
+  "keywords": ["oxid", "modules", "eShop", "template", "responsive"],
+  "homepage": "https://www.oxid-responsive.com",
+  "license": [ "MIT" ],
+  "require": {
+    "php": ">=7.0"
+  },
+  "extra": {
+    "oxideshop": {
+      "target-directory": "roxid"
+    }
+  },
+  "autoload": {
+    "psr-4": {
+        "SeemannIT\\Roxid\\": "../../../source/modules/seemannit/roxid"
+    }
+  }
+}

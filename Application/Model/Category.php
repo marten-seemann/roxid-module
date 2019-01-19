@@ -1,7 +1,9 @@
 <?php
-require_once(dirname(__FILE__)."/../inc/retinafy.php");
+namespace SeemannIT\Roxid\Application\Model;
 
-class roxid_extend_oxcategory extends roxid_extend_oxcategory_parent {
+require_once(dirname(__FILE__)."/../../inc/retinafy.php");
+
+class Category extends Category_parent {
   public function getThumbUrl() {
     $url = parent::getThumbUrl();
     return retinafy($url);

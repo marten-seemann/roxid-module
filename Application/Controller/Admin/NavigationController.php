@@ -1,5 +1,7 @@
 <?php
-class roxid_admin_navigation extends roxid_admin_navigation_parent {
+namespace SeemannIT\Roxid\Application\Controller\Admin;
+
+class NavigationController extends NavigationController_parent {
   protected $sRoxidUpdateCheckUrl = 'https://updates.oxid-responsive.com/getlatestversion/';
 
   /**
@@ -34,12 +36,12 @@ class roxid_admin_navigation extends roxid_admin_navigation_parent {
     $name = $aTheme['id'];
     $version = $aTheme['version'];
     $sUrl = $this->sRoxidUpdateCheckUrl.urlencode($name);
-    $sVersion = trim(oxRegistry::get("oxUtilsFile")->readRemoteFileAsString($sUrl));
+    $sVersion = trim(\OxidEsales\Eshop\Core\Registry::get("oxUtilsFile")->readRemoteFileAsString($sUrl));
     if(substr($sVersion, 0, 1) == "v") $sVersion = substr($sVersion, 1); // remove a leading v in front of version, if exists
     if ($sVersion) {
       // current version is older ..
       if (version_compare($version, $sVersion) == '-1') {
-        return sprintf(oxRegistry::getLang()->translateString('ROXID_NEWVERSIONAVAILABLE'), $sVersion);
+        return sprintf(\OxidEsales\Eshop\Core\Registry::getLang()->translateString('ROXID_NEWVERSIONAVAILABLE'), $sVersion);
       }
     }
     return false;

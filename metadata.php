@@ -6,7 +6,7 @@
 /**
  * Metadata version
  */
-$sMetadataVersion = '1.1';
+$sMetadataVersion = '2.0';
 
 /**
  * Module information
@@ -14,36 +14,37 @@ $sMetadataVersion = '1.1';
 $aModule = array(
     'id'           => 'roxid',
     'title'        => '<span style=\'letter-spacing:0.09em\'><strong style=\'color: #84AA4C;\'>R</strong>OXID</span>',
-    'description'  => array(
+    'description'  => [
         'en' => '',
         'de' => ''
-        ),
+    ],
     // 'thumbnail'    => 'picture.png',
     'version'      => '3.4.5',
     'author'       => 'Marten Seemann',
-    'extend'       => array(
-        'oxconfig' => 'roxid/core/roxid_extend_oxconfig',
-        'oxlang' => 'roxid/core/roxid_extend_oxlang',
-        'oxinputvalidator' => 'roxid/core/roxid_extend_oxinputvalidator',
-        'oxviewconfig' => 'roxid/core/roxid_extend_oxviewconfig',
-        'oxshopcontrol' => 'roxid/core/roxid_extend_oxshopcontrol',
-        'oxutilspic' => 'roxid/core/roxid_extend_oxutilspic',
-        'oxarticle' => 'roxid/models/roxid_extend_oxarticle',
-        'oxbasketitem' => 'roxid/models/roxid_extend_oxbasketitem',
-        'oxcategory' => 'roxid/models/roxid_extend_oxcategory',
-        'oxcategorylist' => 'roxid/models/roxid_extend_oxcategorylist',
-        'oxmanufacturer' => 'roxid/models/roxid_extend_oxmanufacturer',
-        'oxrequiredaddressfields' => 'roxid/models/roxid_extend_oxrequiredaddressfields',
-        'basket' => 'roxid/controllers/roxid_basket_ajax',
-        'navigation' => 'roxid/controllers/roxid_admin_navigation',
-        'payment' => 'roxid/controllers/roxid_payment_ajax',
-        'oxcmp_basket'  => 'roxid/components/roxid_extend_oxcmp_basket',
-    ),
-    'files'        => array(
-        'ajaxbasket' => 'roxid/controllers/ajaxbasket.php'
-    ),
-    'templates'    => array(
-        'messages.tpl' => 'roxid/views/messages.tpl'
-    ),
+    'extend'       => [
+        \OxidEsales\Eshop\Application\Component\BasketComponent::class => \SeemannIT\Roxid\Application\Component\BasketComponent::class,
+        \OxidEsales\Eshop\Application\Controller\Admin\NavigationController::class => \SeemannIT\Roxid\Application\Controller\Admin\NavigationController::class,
+        \OxidEsales\Eshop\Application\Controller\Admin\NavigationController::class => \SeemannIT\Roxid\Application\Controller\Admin\NavigationController::class,
+        \OxidEsales\Eshop\Application\Controller\BasketController::class => \SeemannIT\Roxid\Application\Controller\BasketController::class,
+        \OxidEsales\Eshop\Core\Config::class => \SeemannIT\Roxid\Core\Config::class,
+        \OxidEsales\Eshop\Core\DynamicImageGenerator::class => \SeemannIT\Roxid\Core\DynamicImageGenerator::class,
+        \OxidEsales\Eshop\Core\InputValidator::class => \SeemannIT\Roxid\Core\InputValidator::class,
+        \OxidEsales\Eshop\Core\Language::class => \SeemannIT\Roxid\Core\Language::class,
+        \OxidEsales\Eshop\Core\ShopControl::class => \SeemannIT\Roxid\Core\ShopControl::class,
+        \OxidEsales\Eshop\Core\UtilsPic::class => \SeemannIT\Roxid\Core\UtilsPic::class,
+        \OxidEsales\Eshop\Core\ViewConfig::class => \SeemannIT\Roxid\Core\ViewConfig::class,
+        \OxidEsales\Eshop\Application\Model\Article::class => \SeemannIT\Roxid\Application\Model\Article::class,
+        \OxidEsales\Eshop\Application\Model\BasketItem::class => \SeemannIT\Roxid\Application\Model\BasketItem::class,
+        \OxidEsales\Eshop\Application\Model\Category::class => \SeemannIT\Roxid\Application\Model\Category::class,
+        \OxidEsales\Eshop\Application\Model\Categorylist::class => \SeemannIT\Roxid\Application\Model\Categorylist::class,
+        \OxidEsales\Eshop\Application\Model\Manufacturer::class => \SeemannIT\Roxid\Application\Model\Manufacturer::class,
+        \OxidEsales\Eshop\Application\Model\RequiredAddressFields::class => \SeemannIT\Roxid\Application\Model\RequiredAddressFields::class,
+    ],
+    'controllers'    => [
+        'ajaxbasket' => \SeemannIT\Roxid\Application\Controller\AjaxBasket::class,
+    ],
+    'templates'    => [
+        'messages.tpl' => 'seemannit/roxid/views/messages.tpl'
+    ],
     'url' => 'http://www.oxid-responsive.com'
 );

@@ -1,12 +1,14 @@
 <?php
-class roxid_extend_oxrequiredaddressfields extends roxid_extend_oxrequiredaddressfields_parent {
+namespace SeemannIT\Roxid\Application\Model;
+
+class RequiredAddressFields extends RequiredAddressFields_parent {
   /**
   * remove input fields, that were disabled via an backend option, from the array of required inputs
   *
   * @return array
   */
   public function getRequiredFields() {
-    $oConfig = oxRegistry::getConfig();
+    $oConfig = \OxidEsales\Eshop\Core\Registry::getConfig();
 
     $aRet = parent::getRequiredFields();
 
@@ -23,6 +25,4 @@ class roxid_extend_oxrequiredaddressfields extends roxid_extend_oxrequiredaddres
     }
     return $aRet;
   }
-
-
 }
