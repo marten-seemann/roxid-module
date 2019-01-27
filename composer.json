@@ -10,12 +10,12 @@
   },
   "extra": {
     "oxideshop": {
-      "target-directory": "roxid"
+      "target-directory": "seemannit/roxid"
     }
   },
   "autoload": {
     "psr-4": {
-        "SeemannIT\\Roxid\\": "../../../source/modules/seemannit/roxid"
+      "SeemannIT\\Roxid\\": "../../../source/modules/seemannit/roxid"
     }
   }
 }
