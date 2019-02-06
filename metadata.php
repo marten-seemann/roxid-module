@@ -26,6 +26,7 @@ $aModule = array(
         \OxidEsales\Eshop\Application\Controller\Admin\NavigationController::class => \SeemannIT\Roxid\Application\Controller\Admin\NavigationController::class,
         \OxidEsales\Eshop\Application\Controller\Admin\NavigationController::class => \SeemannIT\Roxid\Application\Controller\Admin\NavigationController::class,
         \OxidEsales\Eshop\Application\Controller\BasketController::class => \SeemannIT\Roxid\Application\Controller\BasketController::class,
+        \OxidEsales\Eshop\Application\Controller\PaymentController::class => \SeemannIT\Roxid\Application\Controller\PaymentController::class,
         \OxidEsales\Eshop\Core\Config::class => \SeemannIT\Roxid\Core\Config::class,
         \OxidEsales\Eshop\Core\DynamicImageGenerator::class => \SeemannIT\Roxid\Core\DynamicImageGenerator::class,
         \OxidEsales\Eshop\Core\InputValidator::class => \SeemannIT\Roxid\Core\InputValidator::class,
