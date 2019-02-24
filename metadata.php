@@ -37,7 +37,7 @@ $aModule = array(
         \OxidEsales\Eshop\Application\Model\Article::class => \SeemannIT\Roxid\Application\Model\Article::class,
         \OxidEsales\Eshop\Application\Model\BasketItem::class => \SeemannIT\Roxid\Application\Model\BasketItem::class,
         \OxidEsales\Eshop\Application\Model\Category::class => \SeemannIT\Roxid\Application\Model\Category::class,
-        \OxidEsales\Eshop\Application\Model\Categorylist::class => \SeemannIT\Roxid\Application\Model\Categorylist::class,
+        \OxidEsales\Eshop\Application\Model\CategoryList::class => \SeemannIT\Roxid\Application\Model\CategoryList::class,
         \OxidEsales\Eshop\Application\Model\Manufacturer::class => \SeemannIT\Roxid\Application\Model\Manufacturer::class,
         \OxidEsales\Eshop\Application\Model\RequiredAddressFields::class => \SeemannIT\Roxid\Application\Model\RequiredAddressFields::class,
     ],
