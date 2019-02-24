@@ -1,7 +1,7 @@
 <?php
 namespace SeemannIT\Roxid\Application\Model;
 
-class Basketitem extends Basketitem_parent {
+class BasketItem extends BasketItem_parent {
   /**
    * Returns article thumbnail picture url
    *
