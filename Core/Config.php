@@ -133,9 +133,10 @@ class Config extends Config_parent {
   * only difference: if an image dimension is requested, return the image dimension for the device detected by detectDevice()
   *
   * @param string   $sName config parameter name
+  * @param mixed  $default default value if no config var is found default null
   * @return string  the configuration parameter
   */
-  public function getConfigParam($sName) {
+  public function getConfigParam($sName, $default = null) {
     $sNameMod = $sName;
     $device_type = $this->getDeviceType();
 
@@ -146,6 +147,6 @@ class Config extends Config_parent {
       }
     }
 
-    return parent::getConfigParam($sNameMod);
+    return parent::getConfigParam($sNameMod, $default);
   }
 }
