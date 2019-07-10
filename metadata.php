@@ -19,7 +19,7 @@ $aModule = array(
         'de' => ''
     ],
     // 'thumbnail'    => 'picture.png',
-    'version'      => '4.0.0',
+    'version'      => '4.0.1',
     'author'       => 'Marten Seemann',
     'extend'       => [
         \OxidEsales\Eshop\Application\Component\BasketComponent::class => \SeemannIT\Roxid\Application\Component\BasketComponent::class,
